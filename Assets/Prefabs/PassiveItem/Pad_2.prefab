@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 857648582790746128}
   - component: {fileID: 2229365950220864317}
   - component: {fileID: 5354402473997311758}
+  - component: {fileID: -4646798671304462678}
   m_Layer: 0
   m_Name: Pad_2
   m_TagString: Untagged
@@ -81,3 +82,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-4646798671304462678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63804266365147360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c53a7b81f23c7441bd1b2aa2eb13372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

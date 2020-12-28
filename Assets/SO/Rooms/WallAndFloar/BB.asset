@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e9a29ce79a6b04b9bfe180660becc8, type: 3}
+  m_Name: BB
+  m_EditorClassIdentifier: 
+  Wall:
+  - {fileID: -2301157720164697460, guid: 76067fff689c682468f0d500522b9928, type: 3}
+  Floar:
+  - {fileID: 6182357276101588603, guid: f32cc903a9f308d4ea42267b509c94a6, type: 3}
+  - {fileID: 2994128776158019121, guid: 9d1838b1be2bad1459efba665d08b5de, type: 3}
+  - {fileID: -2384017660746652222, guid: 2c48209a1f7ffff44b77e3b7f1663a98, type: 3}
+  - {fileID: -6804855160960916482, guid: 1942fb855df32924884e5f8872c48ba9, type: 3}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3085940562190381232}
   - component: {fileID: 1514939626960320629}
   - component: {fileID: 9197057053728621909}
+  - component: {fileID: -5192001758917878450}
   m_Layer: 0
   m_Name: RedPlitkaFloar
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7405262465089259276}
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.990005, y: 0, z: 11.960001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.627, y: 1, z: 0.627}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,3 +96,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.3999996, y: 0.1, z: 6.4}
   m_Center: {x: -0.06915449, y: -0.049999703, z: -0.00000035762784}
+--- !u!114 &-5192001758917878450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7405262465089259276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1887ec589fb5d4ab1e2839b81da000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

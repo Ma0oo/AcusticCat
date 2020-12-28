@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e9a29ce79a6b04b9bfe180660becc8, type: 3}
+  m_Name: GR
+  m_EditorClassIdentifier: 
+  Wall:
+  - {fileID: 5318654905274501528, guid: 40a8ff3b800ae1c4db85848fa18b4ef5, type: 3}
+  Floar:
+  - {fileID: 4888949264210288434, guid: bf151e9c8286ac643a87cd5f0c1467ff, type: 3}
+  - {fileID: 4685092816373954557, guid: 3aa878cef6ca982428073bbc3a4a0550, type: 3}
+  - {fileID: -937900069285802560, guid: eb14db725901a49478d92c4c7b05eade, type: 3}
+  - {fileID: -5192001758917878450, guid: 0f98b090784528a498a10ce83901e363, type: 3}

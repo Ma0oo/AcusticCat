@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5937931337649821044}
   - component: {fileID: 8641288774417807525}
   - component: {fileID: 5653644746727759216}
+  - component: {fileID: -3430114773518067609}
   m_Layer: 0
   m_Name: GreyPlitkaFloar
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9095097114874023805}
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.889572, y: 0, z: 11.960001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.627, y: 1, z: 0.627}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,3 +96,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.399999, y: 0.099999994, z: 6.3999996}
   m_Center: {x: -0.06872081, y: -0.0499997, z: -0.0000007152557}
+--- !u!114 &-3430114773518067609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9095097114874023805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1887ec589fb5d4ab1e2839b81da000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

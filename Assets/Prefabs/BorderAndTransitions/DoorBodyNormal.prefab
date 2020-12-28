@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 3695768472095545716}
   - component: {fileID: 451860258448680267}
   - component: {fileID: 8864462748288993430}
+  - component: {fileID: 8309384883028527526}
   m_Layer: 0
   m_Name: DoorBodyNormal
   m_TagString: Untagged
@@ -245,6 +246,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8309384883028527526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2960080590661993232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa2d6e67a0693a438751b8d2178d4cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _doorBody: {fileID: 0}
+  _direction: 0
+  _pointExit: {fileID: 0}
 --- !u!1 &3373577597210513513
 GameObject:
   m_ObjectHideFlags: 0

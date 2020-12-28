@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2626264380292039415}
   - component: {fileID: 4421734492699208426}
   - component: {fileID: 4822841258526256022}
+  - component: {fileID: 4685092816373954557}
   m_Layer: 0
   m_Name: RedAbstractFloar
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5042991427583615302}
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.851482, y: 0, z: 19.03848}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.627, y: 1, z: 0.627}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,3 +96,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.3999996, y: 0.1, z: 6.4}
   m_Center: {x: 0.06936859, y: -0.049999963, z: -0.07847964}
+--- !u!114 &4685092816373954557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5042991427583615302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1887ec589fb5d4ab1e2839b81da000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
