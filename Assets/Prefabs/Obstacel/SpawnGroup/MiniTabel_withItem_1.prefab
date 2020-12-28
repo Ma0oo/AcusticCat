@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8600371380185744690
 Transform:
@@ -134,7 +134,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &913255014591050917
 Transform:
@@ -163,6 +163,10 @@ PrefabInstance:
     - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_Name
       value: PointForPassiveItem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -249,6 +253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointForPassiveItem (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8842286
@@ -333,6 +341,10 @@ PrefabInstance:
     - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_Name
       value: PointForPassiveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x

@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &839154282370971980
 Transform:
@@ -57,7 +57,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8664919592225792352
 Transform:
@@ -187,6 +187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointForPassiveItem (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.0387387
@@ -271,6 +275,10 @@ PrefabInstance:
     - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_Name
       value: PointForPassiveItem (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -357,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointForPassiveItem (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.7358294
@@ -441,6 +453,10 @@ PrefabInstance:
     - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_Name
       value: PointForPassiveItem (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -527,6 +543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointForPassiveItem (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.2845855
@@ -611,6 +631,10 @@ PrefabInstance:
     - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_Name
       value: PointForPassiveItem (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -697,6 +721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointForPassiveItem (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.8191557
@@ -782,6 +810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointForPassiveItem (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5719573
@@ -866,6 +898,10 @@ PrefabInstance:
     - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_Name
       value: PointForPassiveItem (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157472878717193233, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4431767586388165330, guid: 28e2625e01212044cba2cab1f38974a8, type: 3}
       propertyPath: m_LocalPosition.x

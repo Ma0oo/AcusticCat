@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Ventelation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("оюъекты вентиляции")]
+    [SerializeField] private GameObject _bodyVentelation;
+    [SerializeField] private GameObject _doorVentelation;
+
+    [Header("Настройки вентиляции")]
+    [SerializeField] private Transform _pointExit;
+    [SerializeField] private bool isOpen;
+
+    public bool isUsed => _target != null;
+
+    private Ventelation _target;
+
+    public void DisabelMe()
     {
-        
+        _bodyVentelation.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EnabelMe()
     {
-        
+        _bodyVentelation.SetActive(true);
     }
 }

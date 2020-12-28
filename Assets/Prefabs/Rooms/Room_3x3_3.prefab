@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: -6566735805208245545}
   - component: {fileID: 2329549599852213256}
   m_Layer: 0
-  m_Name: Room_3x3_2
+  m_Name: Room_3x3_3
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818033065926388975}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -119,7 +119,7 @@ Transform:
   - {fileID: 7808566450219941809}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &-6566735805208245545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   _maxRoomNeiberhood: 2
   SizeX: 3
   SizeZ: 3
-  _preferredNextRoom: 030000000000000005000000
+  _preferredNextRoom: 000000000300000005000000
 --- !u!1 &1818033065986243800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,7 +1946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4802420768661730327, guid: 5f9b22aba973e334ca3ba062b333e6c3, type: 3}
       propertyPath: _direction
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6007409304151285644, guid: 5f9b22aba973e334ca3ba062b333e6c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2535,7 +2535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4802420768661730327, guid: 5f9b22aba973e334ca3ba062b333e6c3, type: 3}
       propertyPath: _direction
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6007409304151285644, guid: 5f9b22aba973e334ca3ba062b333e6c3, type: 3}
       propertyPath: m_LocalPosition.x
