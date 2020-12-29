@@ -158,15 +158,21 @@ MonoBehaviour:
   - {fileID: -2922240156105141735, guid: 890794707dc4d4442974f69170a44a39, type: 3}
   - {fileID: -2922240156105141735, guid: b06f09fdbd28c2e46bf89f861224fa5a, type: 3}
   - {fileID: -2922240156105141735, guid: f087eeebe8051d2488d379f2e4fa9442, type: 3}
-  - {fileID: -6265498355218742269, guid: ed35e292852c5dd479d97df30d7d8d7f, type: 3}
-  - {fileID: 2329549599852213256, guid: 8961484b2d687f64abbae2fe1cfbb489, type: 3}
   - {fileID: 2329549599852213256, guid: f5744381c0a2d7b4e8feab603af877c6, type: 3}
   - {fileID: 2329549599852213256, guid: f161d440ce052834fbcc4c17d32c534f, type: 3}
   - {fileID: 177130950937904972, guid: d242b151b4e161d409fc31c41d3669af, type: 3}
   - {fileID: 177130950937904972, guid: 94f30a4ca8cfc7747952fea07379b82d, type: 3}
   - {fileID: 177130950937904972, guid: 719ef5b05ef81a4478671bd922068b93, type: 3}
+  - {fileID: -2922240156105141735, guid: d49cdbf93db76ef4e8cf9e4ae01c062a, type: 3}
+  - {fileID: -2922240156105141735, guid: b845511075c5e9a428d4c378f4a5db9a, type: 3}
+  - {fileID: -2922240156105141735, guid: fc7c3aa72a75f234aa337f921ad17473, type: 3}
+  - {fileID: -2922240156105141735, guid: fbd203740c8389a4ba170fbb12955506, type: 3}
+  - {fileID: -6265498355218742269, guid: e75d217a59c549642b00aee6aa010e4f, type: 3}
+  - {fileID: -6265498355218742269, guid: ed35e292852c5dd479d97df30d7d8d7f, type: 3}
+  - {fileID: 2329549599852213256, guid: 8961484b2d687f64abbae2fe1cfbb489, type: 3}
   parentOfRoom: {fileID: 518618332}
   _countRoomInHotel: 20
+  _countVentTrasition: 5
 --- !u!4 &518618332
 Transform:
   m_ObjectHideFlags: 0

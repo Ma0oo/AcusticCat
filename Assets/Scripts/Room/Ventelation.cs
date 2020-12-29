@@ -16,11 +16,27 @@ public class Ventelation : MonoBehaviour
 
     private Ventelation _target;
 
+
+    private void Update()
+    {
+        if (isUsed)
+        {
+            Debug.DrawRay(transform.position, -transform.position + _target.transform.position, Color.green);
+        }
+    }
+    public void TryDisabel()
+    {
+        if (isUsed == false)
+            DisabelMe();
+    }
     public void DisabelMe()
     {
         _bodyVentelation.SetActive(false);
     }
-
+    public void JoinWith(Ventelation vent)
+    {
+        _target = vent;
+    }
     public void EnabelMe()
     {
         _bodyVentelation.SetActive(true);

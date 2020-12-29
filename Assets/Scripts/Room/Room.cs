@@ -7,11 +7,14 @@ public class Room : MonoBehaviour
     [SerializeField] private Door[] _doors;
     [SerializeField] private Ventelation[] _vents;
     [SerializeField] private TypeRoom _typeRoom;
-    [SerializeField] private int _minRoomNeiberhood, _maxRoomNeiberhood;
-    [SerializeField] private int SizeX, SizeZ;
+    private int _minRoomNeiberhood, _maxRoomNeiberhood;
+    private int SizeX, SizeZ;
     [SerializeField] private TypeRoom[] _preferredNextRoom;
 
     private int _correctCountNieberhood;
+
+    public Ventelation[] Vents => _vents;
+
     private void Start()
     {
         _correctCountNieberhood = Random.Range(0, _maxRoomNeiberhood+1);
@@ -51,6 +54,13 @@ public class Room : MonoBehaviour
             door.TryDisabel();
         }
     }
+    public void TryDisabelAllVet()
+    {
+        foreach (var vent in _vents)
+        {
+            vent.TryDisabel();
+        }
+    }
     public bool CheckHasCorrectDoor(Door.Direction directionOtherDoor)
     {
         List<Door> doorsWithCorrectDirection = GetAllDoorsWithOppositeDirection(directionOtherDoor);
@@ -88,7 +98,7 @@ public class Room : MonoBehaviour
         }
         return doors;
     }
-    public void JoinWithOtherRoom(Door doorOfOtherRoom)
+    public void JoinWithOtherRoomByDoor(Door doorOfOtherRoom)
     {
         List<Door> correctDoor = GetAllDoorsWithOppositeDirection(doorOfOtherRoom.Direct);
         Door freeOurDoor = null;

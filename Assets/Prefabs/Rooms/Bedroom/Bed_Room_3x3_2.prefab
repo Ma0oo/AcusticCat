@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: -6566735805208245545}
   - component: {fileID: 2329549599852213256}
   m_Layer: 0
-  m_Name: Room_3x3_2
+  m_Name: Bed_Room_3x3_2
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -181,11 +181,7 @@ MonoBehaviour:
   - {fileID: 6407648261019319139}
   _vents: []
   _typeRoom: 3
-  _minRoomNeiberhood: 1
-  _maxRoomNeiberhood: 2
-  SizeX: 3
-  SizeZ: 3
-  _preferredNextRoom: 030000000000000005000000
+  _preferredNextRoom: 020000000300000005000000
 --- !u!1 &1818033065986243800
 GameObject:
   m_ObjectHideFlags: 0

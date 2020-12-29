@@ -7,9 +7,12 @@ public class GeneratorHotel : MonoBehaviour
     [SerializeField] private Room[] prefabsRoom;
     [SerializeField] private Transform parentOfRoom;
     [SerializeField] private int _countRoomInHotel;
+    [SerializeField] private int _countVentTrasition;
 
     private List<Room> roomWithFreeDoor = new List<Room>();
     private List<Room> roomWithBusyDoor = new List<Room>();
+
+    private List<Room> _allRooms = new List<Room>();
 
     private void Start()
     {
@@ -19,7 +22,7 @@ public class GeneratorHotel : MonoBehaviour
     private void GenerateHotel()
     {
         roomWithFreeDoor.Add(InstantieteRoom(GetRandomRoomByType(Room.TypeRoom.storage)));
-
+        _allRooms.Add(roomWithFreeDoor[0]);
         while (roomWithBusyDoor.Count + roomWithFreeDoor.Count <= _countRoomInHotel)
         {
             CheckListFreeAndBuseDoor();
@@ -27,8 +30,9 @@ public class GeneratorHotel : MonoBehaviour
             Door doorOfChoiceRoom = choiceRoom.RandomFreeDoor;
             Room nextRoom = FindRoomWithCorrectDoor(choiceRoom.PreferredNextRoom, doorOfChoiceRoom.Direct);
             nextRoom = InstantieteRoom(nextRoom);
-            nextRoom.JoinWithOtherRoom(doorOfChoiceRoom);
+            nextRoom.JoinWithOtherRoomByDoor(doorOfChoiceRoom);
             roomWithFreeDoor.Add(nextRoom);
+            _allRooms.Add(nextRoom);
             CheckListFreeAndBuseDoor();
 
             int free = roomWithFreeDoor.Count;
@@ -37,13 +41,48 @@ public class GeneratorHotel : MonoBehaviour
             Debug.Log($"{free} + {busy} = {sum} < {_countRoomInHotel} : {sum < _countRoomInHotel}");
         }
 
-        foreach (var item in roomWithFreeDoor)
+        CreateVetTransition(_countVentTrasition);
+
+        DisabelDoorAndVentelation();
+    }
+    private void CreateVetTransition(int countTransition)
+    {
+        List<Ventelation> vents = GetAllVents();
+        for (int i = 0; i < _countVentTrasition; i++)
         {
-            item.TryDisabelAllDoors();
+            if (vents.Count <= 1)
+                break;
+
+            Ventelation x = vents[Random.Range(0, vents.Count)];
+            Ventelation y = vents[Random.Range(0, vents.Count)];
+            while (y == x)
+                y = vents[Random.Range(0, vents.Count)];
+
+            x.JoinWith(y);
+            y.JoinWith(x);
+            vents.Remove(x);
+            vents.Remove(y);
+            Debug.Log($"Создано {i} вентиляция");
         }
-        foreach (var item in roomWithBusyDoor)
+    }
+    private List<Ventelation> GetAllVents()
+    {
+        List<Ventelation> result = new List<Ventelation>();
+        foreach (var room in _allRooms)
+        {
+            foreach (var vent in room.Vents)
+            {
+                result.Add(vent);
+            }
+        }
+        return result;
+    }
+    private void DisabelDoorAndVentelation()
+    {
+        foreach (var item in _allRooms)
         {
             item.TryDisabelAllDoors();
+            item.TryDisabelAllVet();
         }
     }
     private void CheckListFreeAndBuseDoor()
