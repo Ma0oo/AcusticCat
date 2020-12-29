@@ -53,4 +53,9 @@ public class PlayerCatAI : MonoBehaviour
         _animatorBodyCat.SetBool("Move", false);
         _animatorBodyCat.SetBool("Rotate", false);
     }
+
+    public void SetTriggerAnimator(string nameTrigger)
+    {
+        _animatorBodyCat.SetTrigger(nameTrigger);
+    }
 }
