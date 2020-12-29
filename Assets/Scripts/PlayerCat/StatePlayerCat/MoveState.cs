@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveState : MonoBehaviour
+public class MoveState : BasePlayerState
 {
-    // Start is called before the first frame update
-    void Start()
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        base.OnStateEnter(animator, stateInfo, layerIndex);
     }
 
-    // Update is called once per frame
-    void Update()
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+
+    }
+
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+
     }
 }

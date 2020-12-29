@@ -6,20 +6,62 @@ using UnityEngine;
 public class CatMover : MonoBehaviour
 {
     [SerializeField] private float _speedMove;
+    [SerializeField] private float _speedRotation;
 
     private Rigidbody _rigidbody;
+    private bool _isMove;
+    private bool _isRotate;
+    private DirectionRotate _direction;
+    private PlayerCatAI _playerCatAI;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-    }
-    public void Update()
-    {
-        MoveForward();
+        _playerCatAI = GetComponent<PlayerCatAI>();
     }
 
+    private void FixedUpdate()
+    {
+        if (_playerCatAI.AnimatorCat.GetBool("Move"))
+            MoveForward();
+        if (_playerCatAI.AnimatorCat.GetBool("Rotate")) 
+            Rotate(_direction);
+    }
+
+    public void SetDirectionRotate(DirectionRotate direction)
+    {
+        _direction = direction;
+    }
+    private void Rotate(DirectionRotate rotate)
+    {
+        switch (rotate) 
+        {
+            case DirectionRotate.left:
+                RotateObject(true);
+                break;
+            case DirectionRotate.right:
+                RotateObject(false);
+                break;
+        }
+
+    }
+    private void RotateObject(bool isToLeft)
+    {
+        _rigidbody.MoveRotation(Quaternion.Lerp(_rigidbody.rotation, GetQuaternionForRotate(isToLeft), Time.fixedDeltaTime * _speedRotation));
+    }
+    private Quaternion GetQuaternionForRotate(bool isToLeft)
+    {
+        if(isToLeft)
+            return Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 1, transform.rotation.eulerAngles.z));
+        else
+            return Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + 1, transform.rotation.eulerAngles.z));
+    }
     private void MoveForward()
     {
         _rigidbody.AddForce(transform.forward * _speedMove, ForceMode.Force);
+    }
+    public enum DirectionRotate
+    {
+        left, right
     }
 }

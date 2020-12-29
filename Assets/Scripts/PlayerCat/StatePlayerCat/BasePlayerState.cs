@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class BasePlayerState : StateMachineBehaviour
 {
-    private CatMover _catMover;
-    private PlayerCatAI _playerCatAI;
+    protected CatMover CatMover;
+    protected PlayerCatAI PlayerCatAI;
+    protected PlayerInput PlayerInput;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (_catMover == null)
-            _catMover = animator.GetComponentInParent<CatMover>();
-        if (_playerCatAI == null)
-            _playerCatAI = animator.GetComponentInParent<PlayerCatAI>();
+        if (CatMover == null)
+            CatMover = animator.GetComponentInParent<CatMover>();
+        if (PlayerCatAI == null)
+            PlayerCatAI = animator.GetComponentInParent<PlayerCatAI>();
+        if (PlayerInput == null)
+            PlayerInput = animator.GetComponentInParent<PlayerInput>();
     }
 }
