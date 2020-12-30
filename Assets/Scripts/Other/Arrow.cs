@@ -31,8 +31,6 @@ public class Arrow : MonoBehaviour
         else
             color.a = distaceToCamera / _distaceMax;
 
-
         _sprite.color = color;
     }
-
 }

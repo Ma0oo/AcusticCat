@@ -2,26 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ventelation : MonoBehaviour, IInteractive
+public class Ventelation : TransiterPlace, IInteractive
 {
-    [Header("оюъекты вентиляции")]
-    [SerializeField] private GameObject _bodyVentelation;
-    [SerializeField] private GameObject _doorVentelation;
-
-    [Header("Настройки вентиляции")]
-    [SerializeField] private Transform _pointExit;
-    [SerializeField] private bool _isOpen;
-
-    public bool isUsed => _target != null;
-
-    private Ventelation _target;
-
-
     private void Update()
     {
-        if (isUsed)
+        if (IsUsed)
         {
-            Debug.DrawRay(transform.position, -transform.position + _target.transform.position, Color.green);
+            Debug.DrawRay(transform.position, -transform.position + Target.transform.position, Color.green);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -39,44 +26,32 @@ public class Ventelation : MonoBehaviour, IInteractive
         }
     }
 
-    public void TryDisabel()
+    public override void ConcreteOpen()
     {
-        if (isUsed == false)
-            DisabelMe();
-    }
-    public void DisabelMe()
-    {
-        _bodyVentelation.SetActive(false);
-    }
-    public void JoinWith(Ventelation vent)
-    {
-        _target = vent;
-    }
-    public void EnabelMe()
-    {
-        _bodyVentelation.SetActive(true);
-    }
-
-    public void Open()
-    {
-        if(_isOpen == false)
+        if(IsOpen == false)
         {
-            Rigidbody rbOfDoor = _doorVentelation.GetComponent<Rigidbody>();
+            Rigidbody rbOfDoor = Door.GetComponent<Rigidbody>();
             rbOfDoor.isKinematic = false;
             rbOfDoor.useGravity = true;
-            _doorVentelation.transform.position = _doorVentelation.transform.position + _doorVentelation.transform.right * -0.3f;
+            Door.transform.position = Door.transform.position + Door.transform.right * -0.3f;
             rbOfDoor.AddForce(Vector3.up*4, ForceMode.Impulse);
-            _isOpen = true;
             Destroy(rbOfDoor.gameObject, 3);
+
+            IsOpen = true;
             GetComponent<BoxCollider>().enabled = false;
+
+            Target?.Open();
         }
+    }
+    public override void Close()
+    {
+        
     }
 
     public string GetNameTrigerAnimator()
     {
         return "TryOpen";
     }
-
     public void Action()
     {
         Open();

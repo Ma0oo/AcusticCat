@@ -19,5 +19,6 @@ public class BasePlayerState : StateMachineBehaviour
             PlayerInput = animator.GetComponentInParent<PlayerInput>();
         if (ActionModul == null)
             ActionModul = animator.GetComponentInParent<ActionModule>();
+
     }
 }

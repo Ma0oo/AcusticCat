@@ -7,13 +7,13 @@ public class TransitSmt : MonoBehaviour
 {
     public event UnityAction<TagCanTransit> StartTransition;
 
-    private Door _door;
+    private TransiterPlace _door;
     private BlackScreen _blackScreen;
     private TagCanTransit _targetForTransit;
 
     private void Awake()
     {
-        _door = GetComponentInParent<Door>();
+        _door = GetComponentInParent<TransiterPlace>();
         _blackScreen = Camera.main.GetComponent<BlackScreen>();
     }
     private void OnEnable()

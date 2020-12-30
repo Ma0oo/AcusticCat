@@ -26,7 +26,7 @@ public class Room : MonoBehaviour
             int countUsedDoor = 0;
             foreach (var door in _doors)
             {
-                if (door.isUsed)
+                if (door.IsUsed)
                     countUsedDoor++;
             }
             return _doors.Length - countUsedDoor;
@@ -39,7 +39,7 @@ public class Room : MonoBehaviour
             List<Door> _freeDoors = new List<Door>();
             foreach (var door in _doors)
             {
-                if (door.isUsed == false)
+                if (door.IsUsed == false)
                     _freeDoors.Add(door);
             }
             return _freeDoors[Random.Range(0, _freeDoors.Count)];
@@ -66,7 +66,7 @@ public class Room : MonoBehaviour
         List<Door> doorsWithCorrectDirection = GetAllDoorsWithOppositeDirection(directionOtherDoor);
         foreach (var door in doorsWithCorrectDirection)
         {
-            if (door.isUsed == false)
+            if (door.IsUsed == false)
                 return true;
         }
         return false;
@@ -104,7 +104,7 @@ public class Room : MonoBehaviour
         Door freeOurDoor = null;
         foreach (var door in correctDoor)
         {
-            if (door.isUsed == false)
+            if (door.IsUsed == false)
             {
                 freeOurDoor = door;
                 break;

@@ -13,11 +13,13 @@ public class CatMover : MonoBehaviour
     private bool _isRotate;
     private DirectionRotate _direction;
     private PlayerCatAI _playerCatAI;
+    private Transform _transforMainBody;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _playerCatAI = GetComponent<PlayerCatAI>();
+        _transforMainBody = GetComponentInChildren<Animator>().transform;
     }
 
     private void FixedUpdate()
