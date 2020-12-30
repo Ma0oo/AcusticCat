@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4178442886787277099}
   - component: {fileID: 469368007781409690}
   - component: {fileID: 8913140628355419314}
+  - component: {fileID: 9101817916364573424}
   m_Layer: 0
   m_Name: LampWallBase
   m_TagString: Untagged
@@ -82,6 +83,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9101817916364573424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824152942954171471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc7148f021fa5fb4f96d733694f19e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minusIntensive: 0.5
+  _plusIntensive: 0.2
+  _minDuration: 0.5
+  _maxDuration: 5
 --- !u!1 &5757336947236484667
 GameObject:
   m_ObjectHideFlags: 0
