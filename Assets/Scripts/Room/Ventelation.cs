@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ventelation : MonoBehaviour
+public class Ventelation : MonoBehaviour, IInteractive
 {
     [Header("оюъекты вентиляции")]
     [SerializeField] private GameObject _bodyVentelation;
@@ -10,7 +10,7 @@ public class Ventelation : MonoBehaviour
 
     [Header("Настройки вентиляции")]
     [SerializeField] private Transform _pointExit;
-    [SerializeField] private bool isOpen;
+    [SerializeField] private bool _isOpen;
 
     public bool isUsed => _target != null;
 
@@ -24,6 +24,21 @@ public class Ventelation : MonoBehaviour
             Debug.DrawRay(transform.position, -transform.position + _target.transform.position, Color.green);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent(out ActionModule actionModeul))
+        {
+            actionModeul.TakeActiveItem(this);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent(out ActionModule actionModeul))
+        {
+            actionModeul.RemoveActiveItem();
+        }
+    }
+
     public void TryDisabel()
     {
         if (isUsed == false)
@@ -41,4 +56,30 @@ public class Ventelation : MonoBehaviour
     {
         _bodyVentelation.SetActive(true);
     }
+
+    public void Open()
+    {
+        if(_isOpen == false)
+        {
+            Rigidbody rbOfDoor = _doorVentelation.GetComponent<Rigidbody>();
+            rbOfDoor.isKinematic = false;
+            rbOfDoor.useGravity = true;
+            _doorVentelation.transform.position = _doorVentelation.transform.position + _doorVentelation.transform.right * -0.3f;
+            rbOfDoor.AddForce(Vector3.up*4, ForceMode.Impulse);
+            _isOpen = true;
+            Destroy(rbOfDoor.gameObject, 3);
+            GetComponent<BoxCollider>().enabled = false;
+        }
+    }
+
+    public string GetNameTrigerAnimator()
+    {
+        return "TryOpen";
+    }
+
+    public void Action()
+    {
+        Open();
+    }
+
 }

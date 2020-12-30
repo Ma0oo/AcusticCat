@@ -22,9 +22,9 @@ public class CatMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_playerCatAI.AnimatorCat.GetBool("Move"))
+        if (_playerCatAI.AnimatorCat.GetCurrentAnimatorStateInfo(0).IsName("Move"))
             MoveForward();
-        if (_playerCatAI.AnimatorCat.GetBool("Rotate")) 
+        if (_playerCatAI.AnimatorCat.GetCurrentAnimatorStateInfo(0).IsName("Rotate")) 
             Rotate(_direction);
     }
 

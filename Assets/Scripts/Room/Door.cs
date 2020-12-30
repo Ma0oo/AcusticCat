@@ -65,17 +65,14 @@ public class Door : MonoBehaviour, IInteractive
     {
         _doorBody.SetActive(false);
     }
-
     private void EnabelMe()
     {
         _doorBody.SetActive(true);
     }
-
     public void JoinMe(Door target)
     {
         _target = target;
     }
-
     public void Open()
     {
         if(_isOpen == false) 
@@ -84,6 +81,7 @@ public class Door : MonoBehaviour, IInteractive
             _door.transform.DORotate(new Vector3(0, _angelOfOpen, 0), 2);
             _isOpen = true;
             _target?.Open();
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
     public void Close()
@@ -93,6 +91,7 @@ public class Door : MonoBehaviour, IInteractive
             _door.transform.DORotate(new Vector3(0, _angelOfclose, 0), 2);
             _isOpen = false;
             _target?.Close();
+            GetComponent<BoxCollider>().enabled = true;
         }
     }
 
@@ -101,7 +100,6 @@ public class Door : MonoBehaviour, IInteractive
         Debug.Log("Возврашаю имя тригера");
         return "TryOpen";
     }
-
     public void Action()
     {
         Debug.Log("Я дверь и я отвкрываюсь");
