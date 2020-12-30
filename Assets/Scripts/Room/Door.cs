@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class Door : MonoBehaviour, IInteractive
 {
+    public UnityAction<TagCanTransit> SomethingWasTransit;
+
     [Header("Объекты двери")]
     [SerializeField] private GameObject _doorBody;
     [SerializeField] private GameObject _door;
@@ -20,7 +23,7 @@ public class Door : MonoBehaviour, IInteractive
     [HideInInspector] public bool isUsed => _target != null;
     public Direction Direct => _direction;
     private float _angelOfclose;
-    private Door _target;
+    [SerializeField] private Door _target;
 
 
     private void Start()
@@ -56,18 +59,11 @@ public class Door : MonoBehaviour, IInteractive
             actionModeul.RemoveActiveItem();
         }
     }
+
     public void TryDisabel()
     {
         if (isUsed == false)
             DisabelMe();
-    }
-    private void DisabelMe()
-    {
-        _doorBody.SetActive(false);
-    }
-    private void EnabelMe()
-    {
-        _doorBody.SetActive(true);
     }
     public void JoinMe(Door target)
     {
@@ -93,6 +89,25 @@ public class Door : MonoBehaviour, IInteractive
             _target?.Close();
             GetComponent<BoxCollider>().enabled = true;
         }
+    }
+    public void EnterSomething(TagCanTransit tagCanTransit)
+    {
+        _target.ExitSomething(tagCanTransit);
+    }
+    public void ExitSomething(TagCanTransit tagCanTransit)
+    {
+        tagCanTransit.transform.position = _pointExit.position;
+        tagCanTransit.transform.rotation = _pointExit.rotation;
+        SomethingWasTransit?.Invoke(tagCanTransit);
+    }
+
+    private void EnabelMe()
+    {
+        _doorBody.SetActive(true);
+    }
+    private void DisabelMe()
+    {
+        _doorBody.SetActive(false);
     }
 
     public string GetNameTrigerAnimator()
