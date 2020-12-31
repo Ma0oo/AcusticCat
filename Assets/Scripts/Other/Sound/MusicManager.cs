@@ -10,6 +10,7 @@ public class MusicManager : MonoBehaviour
 
     private void Start()
     {
+        _audio = GetComponent<AudioSource>();
         PlayRandomMusic();
         StartCoroutine(SetNewTrack());
     }
@@ -19,6 +20,7 @@ public class MusicManager : MonoBehaviour
         if (_musics.Length > 0)
         {
             _audio.clip = _musics[Random.Range(0, _musics.Length)];
+            _audio.Play();
         }
     }
     private void OnFinishPlayMusic()
