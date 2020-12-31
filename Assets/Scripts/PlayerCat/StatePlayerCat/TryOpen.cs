@@ -8,6 +8,7 @@ public class TryOpen : BasePlayerState
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         Debug.Log("Вход в состояние");
+        SoundManagerCat.PlaySound(1, SoundManagerPlayerCat.TypeSound.Meow, false);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -8,6 +8,7 @@ public class BasePlayerState : StateMachineBehaviour
     protected PlayerCatAI PlayerCatAI;
     protected PlayerInput PlayerInput;
     protected ActionModule ActionModul;
+    protected SoundManagerPlayerCat SoundManagerCat;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -19,6 +20,7 @@ public class BasePlayerState : StateMachineBehaviour
             PlayerInput = animator.GetComponentInParent<PlayerInput>();
         if (ActionModul == null)
             ActionModul = animator.GetComponentInParent<ActionModule>();
-
+        if (SoundManagerCat == null)
+            SoundManagerCat = animator.GetComponentInParent<SoundManagerPlayerCat>();
     }
 }

@@ -48,7 +48,7 @@ public class Door : TransiterPlace, IInteractive
     {
         if (IsOpen)
         {
-            Door.transform.DORotate(new Vector3(0, _angelOfclose, 0), 2);
+            Doorr.transform.DORotate(new Vector3(0, _angelOfclose, 0), 2);
             IsOpen = false;
             Target?.Close();
             GetComponent<BoxCollider>().enabled = true;
@@ -58,8 +58,8 @@ public class Door : TransiterPlace, IInteractive
     {
         if (IsOpen == false)
         {
-            float _angelOfOpen = Door.transform.eulerAngles.y - Random.Range(50, 80);
-            Door.transform.DORotate(new Vector3(0, _angelOfOpen, 0), 2);
+            float _angelOfOpen = Doorr.transform.eulerAngles.y - Random.Range(50, 80);
+            Doorr.transform.DORotate(new Vector3(0, _angelOfOpen, 0), 2);
             IsOpen = true;
             Target?.Open();
             GetComponent<BoxCollider>().enabled = false;

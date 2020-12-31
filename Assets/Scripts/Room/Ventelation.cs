@@ -30,10 +30,11 @@ public class Ventelation : TransiterPlace, IInteractive
     {
         if(IsOpen == false)
         {
-            Rigidbody rbOfDoor = Door.GetComponent<Rigidbody>();
+            Doorr.layer = 9;
+            Rigidbody rbOfDoor = Doorr.GetComponent<Rigidbody>();
             rbOfDoor.isKinematic = false;
             rbOfDoor.useGravity = true;
-            Door.transform.position = Door.transform.position + Door.transform.right * -0.3f;
+            Doorr.transform.position = Doorr.transform.position + Doorr.transform.right * -0.3f;
             rbOfDoor.AddForce(Vector3.up*4, ForceMode.Impulse);
             Destroy(rbOfDoor.gameObject, 3);
 

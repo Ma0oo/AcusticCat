@@ -13,7 +13,7 @@ abstract public class TransiterPlace : MonoBehaviour
 
     [Header("Объекты")]
     [SerializeField] protected GameObject DoorBody;
-    [SerializeField] protected GameObject Door;
+    [SerializeField] protected GameObject Doorr;
     [SerializeField] protected Transform PointExit;
 
     [Header("Настройки")]

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerInput), typeof(Special), typeof(Rigidbody))]
+[RequireComponent(typeof(SoundManagerPlayerCat))]
 public class PlayerCatAI : MonoBehaviour
 {
     [SerializeField] private Animator _animatorBodyCat;

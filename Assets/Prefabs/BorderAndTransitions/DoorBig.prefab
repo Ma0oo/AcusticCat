@@ -176,8 +176,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19999981, y: 6.2, z: 2.7999992}
-  m_Center: {x: 0.0929842, y: 3.1008906, z: 1.3757336}
+  m_Size: {x: 0.53384304, y: 6.1999993, z: 2.799999}
+  m_Center: {x: -0.07393717, y: 3.1008909, z: 1.3757336}
 --- !u!54 &5379127621360608749
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoorBody: {fileID: 8465562331513974027}
-  Door: {fileID: 2250586017243484393}
+  Doorr: {fileID: 2250586017243484393}
   PointExit: {fileID: 5202012670319457993}
   IsOpen: 0
   Target: {fileID: 0}
@@ -409,9 +409,9 @@ AudioSource:
   Priority: 113
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 100
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -419,23 +419,59 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.01
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -6.790666
+      outSlope: -6.790666
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0.33766797
+    - serializedVersion: 3
+      time: 0.048217315
+      value: 0.81910706
+      inSlope: -4.9240413
+      outSlope: -4.9240413
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.22639206
+    - serializedVersion: 3
+      time: 0.13700011
+      value: 0.53796387
+      inSlope: -1.9246037
+      outSlope: -1.9246037
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.42077076
+    - serializedVersion: 3
+      time: 0.27753264
+      value: 0.21838379
+      inSlope: -1.5631225
+      outSlope: -1.5631225
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.52508175
+      value: 0.041748047
+      inSlope: -0.39078063
+      outSlope: -0.39078063
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.01
+      inSlope: -0.010003988
+      outSlope: -0.010003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -610,8 +646,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.30000022, y: 6.1920342, z: 2.802004}
-  m_Center: {x: -0.0014286009, y: 3.0860577, z: 0.005171061}
+  m_Size: {x: 0.40267143, y: 6.1920342, z: 2.802004}
+  m_Center: {x: -0.052764155, y: 3.0860577, z: 0.0051710606}
 --- !u!114 &3055432034848298514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,7 +672,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -2511864833508076518, guid: 2518caf93540b1244b90811799d6b84e, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -645,9 +681,9 @@ AudioSource:
   Priority: 55
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 100
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -655,23 +691,59 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.01
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -6.790666
+      outSlope: -6.790666
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0.33766797
+    - serializedVersion: 3
+      time: 0.048217315
+      value: 0.81910706
+      inSlope: -4.9240413
+      outSlope: -4.9240413
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.22639206
+    - serializedVersion: 3
+      time: 0.13700011
+      value: 0.53796387
+      inSlope: -1.9246037
+      outSlope: -1.9246037
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.42077076
+    - serializedVersion: 3
+      time: 0.27753264
+      value: 0.21838379
+      inSlope: -1.5631225
+      outSlope: -1.5631225
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.52508175
+      value: 0.041748047
+      inSlope: -0.39078063
+      outSlope: -0.39078063
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.01
+      inSlope: -0.010003988
+      outSlope: -0.010003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
