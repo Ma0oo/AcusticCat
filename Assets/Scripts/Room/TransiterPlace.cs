@@ -8,6 +8,7 @@ using DG.Tweening;
 [RequireComponent(typeof(TransitPlaceSound))]
 abstract public class TransiterPlace : MonoBehaviour
 {
+    static public event UnityAction<Room> ActiveRoomWasChange;
     public event UnityAction<TagCanTransit> SomethingWasTransit;
     public event UnityAction TransiterPlaceWasOpen;
 
@@ -22,9 +23,13 @@ abstract public class TransiterPlace : MonoBehaviour
     [HideInInspector] public bool IsUsed => Target != null;
     [SerializeField] protected TransiterPlace Target;
 
+    private Room _myRoom;
 
 
-
+    public void GetRoom(Room room)
+    {
+        _myRoom = room;
+    }
     public void Open() 
     {
         TransiterPlaceWasOpen?.Invoke();
@@ -45,6 +50,7 @@ abstract public class TransiterPlace : MonoBehaviour
         tagCanTransit.transform.position = PointExit.position;
         tagCanTransit.transform.rotation = PointExit.rotation;
         SomethingWasTransit?.Invoke(tagCanTransit);
+        ActiveRoomWasChange?.Invoke(_myRoom);
     }
 
     public void JoinWith(TransiterPlace target)

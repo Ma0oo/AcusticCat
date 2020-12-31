@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &209024350
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.112
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.831
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2490023
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.012379212
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9999234
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 361.419
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 81663355302429242, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: m_Name
+      value: PlayerCat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
 --- !u!1001 &484437325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8656122511190256964, guid: e052e64e32db2da4e9a2b99a2d39f1d6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8656122511190256964, guid: e052e64e32db2da4e9a2b99a2d39f1d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -247,7 +304,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180361319
 GameObject:
@@ -414,3 +471,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d10943718ed6b6849a02b53b186e45ee, type: 3}
+--- !u!1 &1748955402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8656122511190256967, guid: e052e64e32db2da4e9a2b99a2d39f1d6, type: 3}
+  m_PrefabInstance: {fileID: 484437325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1748955403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748955402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e311fb3748a31b40a9d6252bf79323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

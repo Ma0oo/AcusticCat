@@ -9,7 +9,7 @@ public class CameraPoint : MonoBehaviour
     private Camera _testCamera;
     private MeshRenderer _meshRenderer;
 
-    private void Start()
+    private void Awake()
     {
         DestroyTestCamera();
         _meshRenderer = GetComponent<MeshRenderer>();
@@ -19,17 +19,22 @@ public class CameraPoint : MonoBehaviour
     {
         SetMainCam(mainCamera);
     }
-    public void UnactiveCamera()
+    public void DeactiveCamera()
     {
         _meshRenderer.enabled = true;
     }
     private void SetMainCam(Camera camera)
     {
-        camera.transform.position = transform.position;
-        camera.transform.rotation = transform.rotation;
+        camera.transform.SetParent(transform);
+        camera.transform.localPosition = Vector3.zero;
+        camera.transform.localEulerAngles = new Vector3(0, -90, 0);
+        //camera.transform.position = transform.position;
+        //camera.transform.rotation = transform.rotation;
         camera.fieldOfView = _fov;
         _meshRenderer.enabled = false;
     }
+
+
     private void DestroyTestCamera()
     {
         if (_testCamera != null)

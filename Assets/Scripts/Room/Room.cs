@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(ManagerActivityInRoom))]
 public class Room : MonoBehaviour
 {
     [SerializeField] private Door[] _doors;
@@ -18,8 +19,24 @@ public class Room : MonoBehaviour
     private void Start()
     {
         _correctCountNieberhood = Random.Range(0, _maxRoomNeiberhood+1);
+        SetMeInTransitPlace();
     }
-    
+    private void SetMeInTransitPlace()
+    {
+        List<TransiterPlace> places = new List<TransiterPlace>();
+        foreach (var door in _doors)
+        {
+            places.Add(door);
+        }
+        foreach (var vent in _vents)
+        {
+            places.Add(vent);
+        }
+        foreach (var place in places)
+        {
+            place.GetRoom(this);
+        }
+    }
     public int FreeDoor { 
         get
         {

@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 2817124447326279916}
   - component: {fileID: 7396682943051477864}
   - component: {fileID: -2922240156105141735}
+  - component: {fileID: -4175198039910082481}
   m_Layer: 0
   m_Name: Bed_Room_2x1_4
   m_TagString: Untagged
@@ -156,6 +157,18 @@ MonoBehaviour:
   _vents: []
   _typeRoom: 3
   _preferredNextRoom: 00000000
+--- !u!114 &-4175198039910082481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2817124447326279919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a44807c62a4b8438f0f0cdbc67bedf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4474023525583267135
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,11 +590,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d1838b1be2bad1459efba665d08b5de, type: 3}
---- !u!4 &4507803582238102659 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1843802640812453415, guid: 9d1838b1be2bad1459efba665d08b5de, type: 3}
-  m_PrefabInstance: {fileID: 2817124446555650724}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1050789518898676885 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2994128776158019121, guid: 9d1838b1be2bad1459efba665d08b5de, type: 3}
@@ -593,6 +601,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1887ec589fb5d4ab1e2839b81da000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &4507803582238102659 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1843802640812453415, guid: 9d1838b1be2bad1459efba665d08b5de, type: 3}
+  m_PrefabInstance: {fileID: 2817124446555650724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2817124446735009049
 PrefabInstance:
   m_ObjectHideFlags: 0

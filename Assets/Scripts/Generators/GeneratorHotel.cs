@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GeneratorHotel : MonoBehaviour
 {
+    public static event UnityAction<Room> StorageWasCreator;
+
     [SerializeField] private Room[] prefabsRoom;
     [SerializeField] private Transform parentOfRoom;
     [SerializeField] private int _countRoomInHotel;
@@ -21,8 +24,11 @@ public class GeneratorHotel : MonoBehaviour
 
     private void GenerateHotel()
     {
-        roomWithFreeDoor.Add(InstantieteRoom(GetRandomRoomByType(Room.TypeRoom.storage)));
-        _allRooms.Add(roomWithFreeDoor[0]);
+        Room storageRoom = InstantieteRoom(GetRandomRoomByType(Room.TypeRoom.storage));
+        roomWithFreeDoor.Add(storageRoom);
+        _allRooms.Add(storageRoom);
+        StorageWasCreator?.Invoke(storageRoom);
+
         while (roomWithBusyDoor.Count + roomWithFreeDoor.Count <= _countRoomInHotel && roomWithFreeDoor.Count>0)
         {
             CheckListFreeAndBuseDoor();
