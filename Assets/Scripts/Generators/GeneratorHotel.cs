@@ -23,7 +23,7 @@ public class GeneratorHotel : MonoBehaviour
     {
         roomWithFreeDoor.Add(InstantieteRoom(GetRandomRoomByType(Room.TypeRoom.storage)));
         _allRooms.Add(roomWithFreeDoor[0]);
-        while (roomWithBusyDoor.Count + roomWithFreeDoor.Count <= _countRoomInHotel)
+        while (roomWithBusyDoor.Count + roomWithFreeDoor.Count <= _countRoomInHotel && roomWithFreeDoor.Count>0)
         {
             CheckListFreeAndBuseDoor();
             Room choiceRoom = GetRandomRoomWithFreeDoor();
