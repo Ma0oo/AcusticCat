@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraPoint : MonoBehaviour
 {
     [SerializeField] private float _fov = 75;
+    [SerializeField] private AudioClip _soundSwitch;
 
     private Camera _testCamera;
     private MeshRenderer _meshRenderer;
@@ -28,12 +29,18 @@ public class CameraPoint : MonoBehaviour
         camera.transform.SetParent(transform);
         camera.transform.localPosition = Vector3.zero;
         camera.transform.localEulerAngles = new Vector3(0, -90, 0);
-        //camera.transform.position = transform.position;
-        //camera.transform.rotation = transform.rotation;
         camera.fieldOfView = _fov;
         _meshRenderer.enabled = false;
+        PlaySoundSwitch();
     }
-
+    private void PlaySoundSwitch() 
+    {
+        AudioSource source = gameObject.AddComponent<AudioSource>();
+        source.clip = _soundSwitch;
+        source.loop = false;
+        source.Play();
+        Destroy(source, _soundSwitch.length);
+    }
 
     private void DestroyTestCamera()
     {

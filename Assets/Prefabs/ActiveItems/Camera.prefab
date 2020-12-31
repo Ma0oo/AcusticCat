@@ -95,3 +95,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fov: 70
+  _soundSwitch: {fileID: 8300000, guid: effb5fc41fe46814d85aba0dffac7bcd, type: 3}
