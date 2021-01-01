@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(PlayerInput), typeof(Special), typeof(Rigidbody))]
 [RequireComponent(typeof(SoundManagerPlayerCat))]
 public class PlayerCatAI : MonoBehaviour
 {
+    public event UnityAction<float> Eating;
+    public event UnityAction<float> Stressing;
+
     [SerializeField] private Animator _animatorBodyCat;
 
     private PlayerInput _playerInput;
@@ -68,5 +72,15 @@ public class PlayerCatAI : MonoBehaviour
     public void SetTriggerAnimator(string nameTrigger)
     {
         _animatorBodyCat.SetTrigger(nameTrigger);
+    }
+
+    public void Eated(float countFood)
+    {
+        Eating?.Invoke(countFood);
+    }
+    public void Stressed(float countStress)
+    {
+        Stressing?.Invoke(countStress);
+        SetTriggerAnimator("Stress");
     }
 }

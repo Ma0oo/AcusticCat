@@ -257,11 +257,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae967ac60e5aa9e45b8ac47465c7b3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _strength: 5
-  _agility: 5
-  _submission: 5
-  _xp: 5
-  _hpMax: 5
+  _food:
+    _startValue: 86
+    _speedDrop: 0.22
+  _stress:
+    _startValue: 12
+    _speedDrop: 0
 --- !u!114 &81663355302429220
 MonoBehaviour:
   m_ObjectHideFlags: 0
