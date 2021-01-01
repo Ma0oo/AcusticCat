@@ -8,24 +8,18 @@ public class PlayerInput : MonoBehaviour
     public event UnityAction DownKeyMoveForward;
     public event UnityAction DownKeyRotateRight;
     public event UnityAction DownKeyRotateLeft;
+    public event UnityAction DownKeyIdel;
 
     public event UnityAction DownKeyInterect;
-
-    public event UnityAction DownKeyAction1;
-    public event UnityAction DownKeyAction2;
-    public event UnityAction DownKeyAction3;
 
     private void Update()
     {
         CheckKey(KeyCode.W, DownKeyMoveForward, ModePress.down);
         CheckKey(KeyCode.D, DownKeyRotateRight, ModePress.down);
         CheckKey(KeyCode.A, DownKeyRotateLeft, ModePress.down);
+        CheckKey(KeyCode.S, DownKeyIdel, ModePress.down);
 
         CheckKey(KeyCode.E, DownKeyInterect, ModePress.down);
-
-        CheckKey(KeyCode.Alpha1, DownKeyAction1, ModePress.down);
-        CheckKey(KeyCode.Alpha2, DownKeyAction2, ModePress.down);
-        CheckKey(KeyCode.Alpha3, DownKeyAction3, ModePress.down);
     }
 
     private void CheckKey(KeyCode keyCode, UnityAction unityAction, ModePress modePress)
@@ -48,7 +42,6 @@ public class PlayerInput : MonoBehaviour
                 throw new System.Exception("Ты шо сюда засунул?! о_0");
         }
     }
-
     private enum ModePress
     {
         down, hold, up

@@ -23,18 +23,29 @@ public class PlayerCatAI : MonoBehaviour
         _catMover = GetComponent<CatMover>();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-            Move();
-        if (Input.GetKeyDown(KeyCode.A))
-            Rotate(true);
-        if (Input.GetKeyDown(KeyCode.D))
-            Rotate(false);
-        if (Input.GetKeyDown(KeyCode.S))
-            Idel();
+        _playerInput.DownKeyIdel += Idel;
+        _playerInput.DownKeyMoveForward += Move;
+        _playerInput.DownKeyRotateLeft += RotateLeft;
+        _playerInput.DownKeyRotateRight += RotateRight;
+    }
+    private void OnDisable()
+    {
+        _playerInput.DownKeyIdel -= Idel;
+        _playerInput.DownKeyMoveForward -= Move;
+        _playerInput.DownKeyRotateLeft -= RotateLeft;
+        _playerInput.DownKeyRotateRight -= RotateRight;
     }
 
+    private void RotateLeft()
+    {
+        Rotate(true);
+    }
+    private void RotateRight()
+    {
+        Rotate(false);
+    }
     public void Move()
     {
         _animatorBodyCat.SetBool("Move", true);
@@ -54,7 +65,6 @@ public class PlayerCatAI : MonoBehaviour
         _animatorBodyCat.SetBool("Move", false);
         _animatorBodyCat.SetBool("Rotate", false);
     }
-
     public void SetTriggerAnimator(string nameTrigger)
     {
         _animatorBodyCat.SetTrigger(nameTrigger);

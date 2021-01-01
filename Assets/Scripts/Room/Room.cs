@@ -13,13 +13,14 @@ public class Room : MonoBehaviour
     [SerializeField] private TypeRoom[] _preferredNextRoom;
 
     private int _correctCountNieberhood;
-
+    public string ID { get; private set; }
     public Ventelation[] Vents => _vents;
 
     private void Start()
     {
         _correctCountNieberhood = Random.Range(0, _maxRoomNeiberhood+1);
         SetMeInTransitPlace();
+        ID = GeneratorRandomId.Instantiate.GetRandomId(_typeRoom.ToString());
     }
     private void SetMeInTransitPlace()
     {

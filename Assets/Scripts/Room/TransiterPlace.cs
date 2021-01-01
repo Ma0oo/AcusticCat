@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
+using TMPro;
 
 
 [RequireComponent(typeof(TransitPlaceSound))]
@@ -13,6 +14,7 @@ abstract public class TransiterPlace : MonoBehaviour
     public event UnityAction TransiterPlaceWasOpen;
 
     [Header("Объекты")]
+    [SerializeField] protected TextMeshProUGUI TextTargetRoom;
     [SerializeField] protected GameObject DoorBody;
     [SerializeField] protected GameObject Doorr;
     [SerializeField] protected Transform PointExit;
@@ -24,8 +26,14 @@ abstract public class TransiterPlace : MonoBehaviour
     [SerializeField] protected TransiterPlace Target;
 
     private Room _myRoom;
-
-
+    
+    public string GetIdMyRoom()
+    {
+        if(_myRoom != null)
+            return _myRoom.ID;
+        else 
+            return "What, no ID o_0";
+    }
     public void GetRoom(Room room)
     {
         _myRoom = room;
@@ -34,6 +42,7 @@ abstract public class TransiterPlace : MonoBehaviour
     {
         TransiterPlaceWasOpen?.Invoke();
         ConcreteOpen();
+        TextTargetRoom.text = Target.GetIdMyRoom();
     }
     public virtual void Close() 
     { 

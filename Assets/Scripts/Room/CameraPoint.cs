@@ -6,6 +6,7 @@ public class CameraPoint : MonoBehaviour
 {
     [SerializeField] private float _fov = 75;
     [SerializeField] private AudioClip _soundSwitch;
+    [SerializeField] private AudioSource _source;
 
     private Camera _testCamera;
     private MeshRenderer _meshRenderer;
@@ -35,11 +36,8 @@ public class CameraPoint : MonoBehaviour
     }
     private void PlaySoundSwitch() 
     {
-        AudioSource source = gameObject.AddComponent<AudioSource>();
-        source.clip = _soundSwitch;
-        source.loop = false;
-        source.Play();
-        Destroy(source, _soundSwitch.length);
+        _source.clip = _soundSwitch;
+        _source.Play();
     }
 
     private void DestroyTestCamera()
