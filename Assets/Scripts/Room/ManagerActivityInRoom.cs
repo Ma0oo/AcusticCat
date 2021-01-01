@@ -6,6 +6,7 @@ public class ManagerActivityInRoom : MonoBehaviour
 {
     private int _indexCamera = 0;
     private CameraPoint[] _cameras;
+    private StressItem[] _stressItem;
 
     public int CountCamerasInRoom => _cameras.Length;
     public int IndexActiveCamera => _indexCamera + 1;
@@ -13,8 +14,16 @@ public class ManagerActivityInRoom : MonoBehaviour
     private void Awake()
     {
         _cameras = GetComponentsInChildren<CameraPoint>();
+        _stressItem = GetComponentsInChildren<StressItem>();
+        foreach (var item in _stressItem)
+        {
+            item.gameObject.SetActive(false);
+        }
     }
-    
+    public void TurnOnRandomStressItem()
+    {
+        _stressItem[Random.Range(0, _stressItem.Length)].gameObject.SetActive(true);
+    }
     public void NextCamera(Camera mainCamera)
     {
         _cameras[_indexCamera].DeactiveCamera();
