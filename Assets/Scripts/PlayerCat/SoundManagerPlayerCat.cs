@@ -17,6 +17,7 @@ public class SoundManagerPlayerCat : MonoBehaviour
     [SerializeField] private AudioClip _bipRotateRight;
     [SerializeField] private AudioClip _bipIdel;
     [SerializeField] private AudioClip _bipInteract;
+    [SerializeField] private AudioClip _eat;
 
     private PlayerInput _playerInput;
 
@@ -117,12 +118,14 @@ public class SoundManagerPlayerCat : MonoBehaviour
                 return _bipIdel;
             case TypeSound.BipInteract:
                 return _bipInteract;
+            case TypeSound.Eating:
+                return _eat;
             default:
                 throw new System.Exception("Ты мне че скормил?!?!?");
         }
     }
     public enum TypeSound
     {
-        Step, Meow, BipMove, BipRotateLeft, BipRotateRight, BipIdel, BipInteract
+        Step, Meow, BipMove, BipRotateLeft, BipRotateRight, BipIdel, BipInteract, Eating
     }
 }

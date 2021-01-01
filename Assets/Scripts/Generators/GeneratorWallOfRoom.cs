@@ -5,8 +5,8 @@ using UnityEngine;
 public class GeneratorWallOfRoom : MonoBehaviour
 {
     [SerializeField] private SO_floarAndWallOfRoom[] dataBasesWallAndFLoar;
-    [SerializeField] private Wall[] _walls;
-    [SerializeField] private Floar[] _floars;
+    private Wall[] _walls;
+    private Floar[] _floars;
     [SerializeField] private Transform _parentWall;
     [SerializeField] private Transform _parentFloar;
 
@@ -14,11 +14,14 @@ public class GeneratorWallOfRoom : MonoBehaviour
 
     private void Start()
     {
+        _floars = GetComponentsInChildren<Floar>();
+        _walls = GetComponentsInChildren<Wall>();
+
         GenerateAll();
     }
 
     [ContextMenu("Протестировать генератор стен и полов")]
-    private void GenerateAll() //Гавно, просто гавно
+    private void GenerateAll() //гАвно, просто гАвно
     {
         dataBaseWallAndFLoar = dataBasesWallAndFLoar[Random.Range(0, dataBasesWallAndFLoar.Length)];
 

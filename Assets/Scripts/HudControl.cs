@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class HudControl : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class HudControl : MonoBehaviour
     {
         _panelGameOVerFalse.SetActive(true);
         _textResultGameOverFalse.text = textResult;
-        Time.timeScale = 0.005f;
+        Time.timeScale = 0.0005f;
     }
     private void OnNewIndexActiveCamera(int indexActiveCameras)
     {

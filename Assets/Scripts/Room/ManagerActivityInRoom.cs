@@ -7,6 +7,8 @@ public class ManagerActivityInRoom : MonoBehaviour
     private int _indexCamera = 0;
     private CameraPoint[] _cameras;
     private StressItem[] _stressItem;
+    private FoodItem[] _foodItems;
+
 
     public int CountCamerasInRoom => _cameras.Length;
     public int IndexActiveCamera => _indexCamera + 1;
@@ -15,14 +17,25 @@ public class ManagerActivityInRoom : MonoBehaviour
     {
         _cameras = GetComponentsInChildren<CameraPoint>();
         _stressItem = GetComponentsInChildren<StressItem>();
+        _foodItems = GetComponentsInChildren<FoodItem>();
         foreach (var item in _stressItem)
         {
             item.gameObject.SetActive(false);
         }
+        foreach (var item in _foodItems)
+        {
+            item.gameObject.SetActive(false);
+        }
+    }
+    public void TurnOnRandomFoodItem()
+    {
+        if (_foodItems.Length > 0)
+            _foodItems[Random.Range(0, _foodItems.Length)].gameObject.SetActive(true);
     }
     public void TurnOnRandomStressItem()
     {
-        _stressItem[Random.Range(0, _stressItem.Length)].gameObject.SetActive(true);
+        if(_stressItem.Length>0)
+            _stressItem[Random.Range(0, _stressItem.Length)].gameObject.SetActive(true);
     }
     public void NextCamera(Camera mainCamera)
     {

@@ -337,6 +337,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4604b2bca4f35d748bbb8c79f97b851d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _precentChanceSpawnStreesItemInRoom: 73
+  _precentChanceSpawnFoodItemInRoom: 63
+  _countAgentInHotel: 0
   prefabsRoom:
   - {fileID: -3875207214492574499, guid: 6fadf212e5ac55d4eab8f1f7876346a4, type: 3}
   - {fileID: -2922240156105141735, guid: 1beaba8aa6704a24d9235a490474b48c, type: 3}

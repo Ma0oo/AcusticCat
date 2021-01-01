@@ -7,6 +7,12 @@ public class GeneratorHotel : MonoBehaviour
 {
     public static event UnityAction<Room> StorageWasCreator;
 
+    [Header("Настройки активностей")]
+    [Range(0, 100)] [SerializeField] private int _precentChanceSpawnStreesItemInRoom;
+    [Range(0, 100)] [SerializeField] private int _precentChanceSpawnFoodItemInRoom;
+    [Range(0, 20)] [SerializeField] private int _countAgentInHotel;
+
+    [Header("Настройки размера отеля")]
     [SerializeField] private Room[] prefabsRoom;
     [SerializeField] private Transform parentOfRoom;
     [SerializeField] private int _countRoomInHotel;
@@ -20,6 +26,7 @@ public class GeneratorHotel : MonoBehaviour
     private void Start()
     {
         GenerateHotel();
+        GenerateActivityInRoom();
     }
 
     private void GenerateHotel()
@@ -50,6 +57,21 @@ public class GeneratorHotel : MonoBehaviour
         CreateVetTransition(_countVentTrasition);
 
         DisabelDoorAndVentelation();
+    }
+    private void GenerateActivityInRoom()
+    {
+        List<ManagerActivityInRoom> listActivityInRoom = new List<ManagerActivityInRoom>();
+        foreach (var room in _allRooms)
+        {
+            listActivityInRoom.Add(room.GetComponent<ManagerActivityInRoom>());
+        }
+        foreach (var activityInRoom in listActivityInRoom)
+        {
+            if (Random.Range(0, 100) < _precentChanceSpawnStreesItemInRoom)
+                activityInRoom.TurnOnRandomStressItem();
+            if (Random.Range(0, 100) < _precentChanceSpawnFoodItemInRoom)
+                activityInRoom.TurnOnRandomFoodItem();
+        }
     }
     private void CreateVetTransition(int countTransition)
     {
