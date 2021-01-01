@@ -7,11 +7,14 @@ public class ManagerActivityInRoom : MonoBehaviour
     private int _indexCamera = 0;
     private CameraPoint[] _cameras;
 
+    public int CountCamerasInRoom => _cameras.Length;
+    public int IndexActiveCamera => _indexCamera + 1;
+
     private void Awake()
     {
         _cameras = GetComponentsInChildren<CameraPoint>();
     }
-
+    
     public void NextCamera(Camera mainCamera)
     {
         _cameras[_indexCamera].DeactiveCamera();

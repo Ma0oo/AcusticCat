@@ -334,8 +334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: ec6d4b71469575e42b5996c1d5962c52, type: 3}
-  _chanceToStress: 56
-  _valueStess: 40
+  _chanceToStress: 41
+  _valueStess: 50
 --- !u!1 &5074705792189704696
 GameObject:
   m_ObjectHideFlags: 0

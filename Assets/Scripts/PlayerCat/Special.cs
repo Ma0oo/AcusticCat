@@ -8,7 +8,7 @@ public class Special : MonoBehaviour
 {
     public static event UnityAction<float> UpdateFood;
     public static event UnityAction<float> UpdateStress;
-    public static event UnityAction GameOver;
+    public static event UnityAction<string> GameOver;
 
     [SerializeField] private Bar _food;
     [SerializeField] private Bar _stress;
@@ -42,7 +42,7 @@ public class Special : MonoBehaviour
         UpdateFood?.Invoke(_food.GetPercent());
 
         if (_food.IsEmpty)
-            GameOver?.Invoke();
+            GameOver?.Invoke("The cat is too hungry. It disobey orders now.");
     }
     private void OnEating(float countFood)
     {
@@ -59,7 +59,7 @@ public class Special : MonoBehaviour
         UpdateStress?.Invoke(_stress.GetPercent());
 
         if (_stress.IsFull)
-            GameOver?.Invoke();
+            GameOver?.Invoke("The cat in stress. It disobey orders now.");
     }
 
 }

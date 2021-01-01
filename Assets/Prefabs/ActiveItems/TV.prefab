@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 19c5cffa900327d4686c011a3133e41c, type: 3}
   _chanceToStress: 69.1
-  _valueStess: 21.7
+  _valueStess: 60
 --- !u!82 &1548090304143377287
 AudioSource:
   m_ObjectHideFlags: 0

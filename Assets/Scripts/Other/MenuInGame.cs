@@ -7,11 +7,23 @@ public class MenuInGame : MonoBehaviour
 {
     [SerializeField] private GameObject _gameMenu;
 
-
+    private void OnEnable()
+    {
+        Special.GameOver += OnGameOver;
+    }
+    private void OnDisable()
+    {
+        Special.GameOver -= OnGameOver;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             _gameMenu.SetActive(!_gameMenu.activeSelf);
+    }
+
+    private void OnGameOver(string text)
+    {
+        _gameMenu.SetActive(true);
     }
     public void ToMainMenu()
     {
