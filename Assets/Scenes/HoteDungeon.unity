@@ -339,7 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _precentChanceSpawnStreesItemInRoom: 73
   _precentChanceSpawnFoodItemInRoom: 63
-  _countAgentInHotel: 0
+  _countAgentInHotel: 4
   prefabsRoom:
   - {fileID: -3875207214492574499, guid: 6fadf212e5ac55d4eab8f1f7876346a4, type: 3}
   - {fileID: -2922240156105141735, guid: 1beaba8aa6704a24d9235a490474b48c, type: 3}

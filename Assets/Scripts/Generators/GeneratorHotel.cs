@@ -72,6 +72,26 @@ public class GeneratorHotel : MonoBehaviour
             if (Random.Range(0, 100) < _precentChanceSpawnFoodItemInRoom)
                 activityInRoom.TurnOnRandomFoodItem();
         }
+
+        GeneratedAgent();
+    }
+    private void GeneratedAgent()
+    {
+        List<ManagerActivityInRoom> listActivityInRoom = new List<ManagerActivityInRoom>();
+        foreach (var room in _allRooms)
+        {
+            ManagerActivityInRoom temp = room.GetComponent<ManagerActivityInRoom>();
+            if (temp.HasSpawnPointAgent)
+                listActivityInRoom.Add(temp);
+        }
+        for (int i = 0; i < _countAgentInHotel; i++)
+        {
+            if (listActivityInRoom.Count <= 0)
+                break;
+            int index = Random.Range(0, listActivityInRoom.Count);
+            listActivityInRoom[index].TurnOnRandomAgentPoint();
+            listActivityInRoom.RemoveAt(index);
+        }
     }
     private void CreateVetTransition(int countTransition)
     {

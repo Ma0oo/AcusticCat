@@ -338,6 +338,7 @@ MonoBehaviour:
   _bipRotateRight: {fileID: 8300000, guid: 5bea47bdc879a644dbe8dc3a7579181a, type: 3}
   _bipIdel: {fileID: 8300000, guid: 1328763abcabd0c40bfd86fe65953a28, type: 3}
   _bipInteract: {fileID: 8300000, guid: 18e5b548fc927204389fd9139c757f2c, type: 3}
+  _eat: {fileID: 8300000, guid: 1cb6b24a6d3debc48aa7c2bdc4bca5b7, type: 3}
 --- !u!1 &81663355372168658
 GameObject:
   m_ObjectHideFlags: 0

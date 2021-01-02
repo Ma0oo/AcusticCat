@@ -8,13 +8,15 @@ public class ManagerActivityInRoom : MonoBehaviour
     private CameraPoint[] _cameras;
     private StressItem[] _stressItem;
     private FoodItem[] _foodItems;
+    private ManagerTwoAgent[] _agents;
 
-
+    public bool HasSpawnPointAgent => _agents.Length > 0;
     public int CountCamerasInRoom => _cameras.Length;
     public int IndexActiveCamera => _indexCamera + 1;
 
     private void Awake()
     {
+        _agents = GetComponentsInChildren<ManagerTwoAgent>();
         _cameras = GetComponentsInChildren<CameraPoint>();
         _stressItem = GetComponentsInChildren<StressItem>();
         _foodItems = GetComponentsInChildren<FoodItem>();
@@ -25,6 +27,20 @@ public class ManagerActivityInRoom : MonoBehaviour
         foreach (var item in _foodItems)
         {
             item.gameObject.SetActive(false);
+        }
+    }
+    public void TurnOnRandomAgentPoint()
+    {
+        if (_agents.Length > 0)
+        {
+            int index = Random.Range(0, _agents.Length);
+            _agents[index].Spawn();
+            ManagerTwoAgent temp = _agents[index];
+            foreach (var agentPoint in _agents)
+            {
+                if (agentPoint != temp)
+                    Destroy(agentPoint.gameObject);
+            }
         }
     }
     public void TurnOnRandomFoodItem()
