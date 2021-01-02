@@ -64,13 +64,13 @@ public class HudControl : MonoBehaviour
     {
         _panelGameOVerFalse.SetActive(true);
         _textResultGameOverFalse.text = textResult;
-        Time.timeScale = 0.0005f;
+        Time.timeScale = 0;
     }
     private void GameOverWin()
     {
         _panelGameOverWin.SetActive(true);
         GetComponent<MenuInGame>().ActiveGameMenu();
-        Time.timeScale = 0.0005f;
+        Time.timeScale = 0;
     }
     private void UpdateTextAgetns()
     {

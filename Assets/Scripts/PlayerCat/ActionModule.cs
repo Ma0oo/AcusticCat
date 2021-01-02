@@ -34,7 +34,7 @@ public class ActionModule : MonoBehaviour
     public void Action()
     {
         Debug.Log("Вызывают эекшен у активного предмета");
-        ActiveItem.Action();
+        ActiveItem?.Action();
     }
 
     private void Interactive()

@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a932b21ce0c97e48b48420fdbc82a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _food: 30
+  _food: 40
   _minSecondCoolDown: 45
   _maxSecondCoolDown: 90
   _eat: {fileID: 2890428468735233510}

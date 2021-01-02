@@ -258,8 +258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _food:
-    _startValue: 86
-    _speedDrop: 0.6
+    _startValue: 90
+    _speedDrop: 0.7
   _stress:
     _startValue: 12
     _speedDrop: 0

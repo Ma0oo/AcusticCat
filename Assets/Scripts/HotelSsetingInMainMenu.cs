@@ -20,6 +20,7 @@ public class HotelSsetingInMainMenu : MonoBehaviour
     {
         _countRoomText.text = _countRoom.value.ToString();
         _countSpyText.text = _countSpy.value.ToString();
+        _countVentText.text = _countVent.value.ToString();
     }
 
     public void SetPrecentFood(float value)

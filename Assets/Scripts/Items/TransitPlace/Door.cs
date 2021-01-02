@@ -59,7 +59,7 @@ public class Door : TransiterPlace, IInteractive
         if (IsOpen == false)
         {
             float _angelOfOpen = Doorr.transform.eulerAngles.y - Random.Range(50, 80);
-            Doorr.transform.DORotate(new Vector3(0, _angelOfOpen, 0), 2);
+            Doorr.transform.DORotate(new Vector3(0, _angelOfOpen, 0), 0.8f);
             IsOpen = true;
             Target?.Open();
             GetComponent<BoxCollider>().enabled = false;
