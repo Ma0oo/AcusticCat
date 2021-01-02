@@ -926,10 +926,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a830cafee812e41a2614cffd0fd990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _secondToListen: 20
+  _secondToListen: 12
   _imageBar: {fileID: 495561447577811860}
   _particle: {fileID: 7072249578201595727, guid: 73c6dece5a3a78e4283ace0a6d6443e4, type: 3}
-  _secondAgent: {fileID: 0}
 --- !u!82 &4274355953073986583
 AudioSource:
   m_ObjectHideFlags: 0
@@ -951,7 +950,7 @@ AudioSource:
   Priority: 190
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 100
+  MaxDistance: 30
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0

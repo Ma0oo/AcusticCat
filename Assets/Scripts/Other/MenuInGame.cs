@@ -20,7 +20,10 @@ public class MenuInGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             _gameMenu.SetActive(!_gameMenu.activeSelf);
     }
-
+    public void ActiveGameMenu()
+    {
+        _gameMenu.gameObject.SetActive(true);
+    }
     private void OnGameOver(string text)
     {
         _gameMenu.SetActive(true);

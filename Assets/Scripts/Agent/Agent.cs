@@ -9,6 +9,7 @@ using UnityEngine.Events;
 public class Agent : MonoBehaviour
 {
     public event UnityAction FinishListen;
+    public static event UnityAction AgentWasListenUpdateHud;
 
     [SerializeField] private float _secondToListen;
     [SerializeField] private Image _imageBar;
@@ -69,6 +70,7 @@ public class Agent : MonoBehaviour
     {
         StartIdelState();
         Instantiate(_particle, _imageBar.transform.position, Quaternion.identity);
+        AgentWasListenUpdateHud?.Invoke();
         Destroy(this);
     }
     private IEnumerator Listen()

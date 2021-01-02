@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class GeneratorHotel : MonoBehaviour
 {
     public static event UnityAction<Room> StorageWasCreator;
+    public static event UnityAction<int> MessageWithCountAgentOnMap;
 
     [Header("Настройки активностей")]
     [Range(0, 100)] [SerializeField] private int _precentChanceSpawnStreesItemInRoom;
@@ -20,11 +21,20 @@ public class GeneratorHotel : MonoBehaviour
 
     private List<Room> roomWithFreeDoor = new List<Room>();
     private List<Room> roomWithBusyDoor = new List<Room>();
-
     private List<Room> _allRooms = new List<Room>();
+
 
     private void Start()
     {
+        if(GlobalSetting.UseIt)
+        {
+            _precentChanceSpawnFoodItemInRoom = GlobalSetting.PrecentChanceSpawnFoodItemInRoom;
+            _precentChanceSpawnStreesItemInRoom = GlobalSetting.PrecentChanceSpawnStreesItemInRoom;
+            _countAgentInHotel = GlobalSetting.CountAgentInHotel;
+            _countRoomInHotel = GlobalSetting.CountRoomInHotel;
+            _countVentTrasition = GlobalSetting.CountVentTrasition;
+        }
+
         GenerateHotel();
         GenerateActivityInRoom();
     }
@@ -77,6 +87,7 @@ public class GeneratorHotel : MonoBehaviour
     }
     private void GeneratedAgent()
     {
+        int countAgentOnHotel = 0;
         List<ManagerActivityInRoom> listActivityInRoom = new List<ManagerActivityInRoom>();
         foreach (var room in _allRooms)
         {
@@ -89,9 +100,10 @@ public class GeneratorHotel : MonoBehaviour
             if (listActivityInRoom.Count <= 0)
                 break;
             int index = Random.Range(0, listActivityInRoom.Count);
-            listActivityInRoom[index].TurnOnRandomAgentPoint();
+            countAgentOnHotel += listActivityInRoom[index].TurnOnRandomAgentPoint();
             listActivityInRoom.RemoveAt(index);
         }
+        MessageWithCountAgentOnMap?.Invoke(countAgentOnHotel);
     }
     private void CreateVetTransition(int countTransition)
     {

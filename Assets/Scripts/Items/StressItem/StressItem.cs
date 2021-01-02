@@ -33,6 +33,6 @@ public class StressItem : MonoBehaviour
         _source.clip = _audioClip;
         _source.Play();
         Vector3 pos = transform.position;
-        transform.DOMoveY(pos.y + 0.2f, 0.05f).SetLoops(10, LoopType.Yoyo);
+        transform.DOMoveY(pos.y + 0.2f, 0.05f).SetLoops(16, LoopType.Yoyo);
     }
 }

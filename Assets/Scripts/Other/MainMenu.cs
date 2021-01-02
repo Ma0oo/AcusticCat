@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject _tutorialImage;
     [SerializeField] private GameObject _creditPanel;
     [SerializeField] private GameObject[] _creditElements;
+    [SerializeField] private GameObject _setting;
 
     [SerializeField] private int _countIndexCreditPanel;
 
@@ -35,6 +36,10 @@ public class MainMenu : MonoBehaviour
     public void TurnOnOffCredit(bool isOn)
     {
         _creditPanel.SetActive(isOn);
+    }
+    public void TurnOnOrOffSttengPanel()
+    {
+        _setting.SetActive(!_setting.activeSelf);
     }
     public void TurnOnOffTutorial(bool isOn)
     {

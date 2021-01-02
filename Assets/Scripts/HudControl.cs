@@ -12,9 +12,13 @@ public class HudControl : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _camerasText;
     [SerializeField] private TextMeshProUGUI _idRoom;
     [SerializeField] private GameObject _panelGameOVerFalse;
+    [SerializeField] private GameObject _panelGameOverWin;
     [SerializeField] private TextMeshProUGUI _textResultGameOverFalse;
+    [SerializeField] private TextMeshProUGUI _textAgetns;
 
     private int _countCamerasInRoom = 2;
+    private int _countAgentOnMap;
+    private int _countLinstedAgent = 0;
 
     private void OnEnable()
     {
@@ -24,6 +28,10 @@ public class HudControl : MonoBehaviour
         ControlCameraInHotel.NewValueOfCountCameras += OnNewValueOfCountCameras;
         ControlCameraInHotel.NewIndexActiveCamera += OnNewIndexActiveCamera;
         Special.GameOver += OnGameOverFalse;
+        GeneratorHotel.MessageWithCountAgentOnMap += OnMessageWithCountAgentOnMap;
+        Agent.AgentWasListenUpdateHud += OnAgentWasListenUpdateHud;
+
+        StartCoroutine(FirstUpdateCoutSpy());
     }
     private void OnDisable()
     {
@@ -33,16 +41,40 @@ public class HudControl : MonoBehaviour
         ControlCameraInHotel.NewValueOfCountCameras -= OnNewValueOfCountCameras;
         ControlCameraInHotel.NewIndexActiveCamera -= OnNewIndexActiveCamera;
         Special.GameOver -= OnGameOverFalse;
+        GeneratorHotel.MessageWithCountAgentOnMap -= OnMessageWithCountAgentOnMap;
+        Agent.AgentWasListenUpdateHud -= OnAgentWasListenUpdateHud;
     }
     private void OnDestroy()
     {
         Time.timeScale = 1;
+    }
+
+    private void OnAgentWasListenUpdateHud()
+    {
+        _countLinstedAgent++;
+        UpdateTextAgetns();
+        if (_countLinstedAgent >= _countAgentOnMap)
+            GameOverWin();
+    }
+    private void OnMessageWithCountAgentOnMap(int count)
+    {
+        _countAgentOnMap = count;
     }
     private void OnGameOverFalse(string textResult)
     {
         _panelGameOVerFalse.SetActive(true);
         _textResultGameOverFalse.text = textResult;
         Time.timeScale = 0.0005f;
+    }
+    private void GameOverWin()
+    {
+        _panelGameOverWin.SetActive(true);
+        GetComponent<MenuInGame>().ActiveGameMenu();
+        Time.timeScale = 0.0005f;
+    }
+    private void UpdateTextAgetns()
+    {
+        _textAgetns.text = $"{_countLinstedAgent}/{_countAgentOnMap} Spies";
     }
     private void OnNewIndexActiveCamera(int indexActiveCameras)
     {
@@ -74,5 +106,13 @@ public class HudControl : MonoBehaviour
     private enum Bar
     {
         Food, Stress
+    }
+
+    private IEnumerator FirstUpdateCoutSpy()
+    {
+        yield return null;
+        yield return null;
+        yield return null;
+        UpdateTextAgetns();
     }
 }

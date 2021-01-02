@@ -31,7 +31,6 @@ public class AngetSound : MonoBehaviour
         StopCoroutine(_corutinePlaySound);
         _source.clip = _finish;
         _source.Play();
-        Destroy(this);
     }
     public void PlaySound()
     {

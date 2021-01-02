@@ -29,18 +29,23 @@ public class ManagerActivityInRoom : MonoBehaviour
             item.gameObject.SetActive(false);
         }
     }
-    public void TurnOnRandomAgentPoint()
+    public int TurnOnRandomAgentPoint()
     {
         if (_agents.Length > 0)
         {
             int index = Random.Range(0, _agents.Length);
-            _agents[index].Spawn();
+            int result = _agents[index].Spawn();
             ManagerTwoAgent temp = _agents[index];
             foreach (var agentPoint in _agents)
             {
                 if (agentPoint != temp)
                     Destroy(agentPoint.gameObject);
             }
+            return result;
+        }
+        else
+        {
+            return 0;
         }
     }
     public void TurnOnRandomFoodItem()

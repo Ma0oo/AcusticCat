@@ -339,7 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _precentChanceSpawnStreesItemInRoom: 73
   _precentChanceSpawnFoodItemInRoom: 63
-  _countAgentInHotel: 4
+  _countAgentInHotel: 5
   prefabsRoom:
   - {fileID: -3875207214492574499, guid: 6fadf212e5ac55d4eab8f1f7876346a4, type: 3}
   - {fileID: -2922240156105141735, guid: 1beaba8aa6704a24d9235a490474b48c, type: 3}
@@ -564,6 +564,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 44011419386244567, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 44011419386244567, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_Name
+      value: GameOverFaildPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 627433097867912840, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -668,6 +676,66 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 627433098433977838, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.8614814
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433098433977838, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433098433977838, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433098433977838, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.23935416
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433098433977838, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433098433977838, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433098832372907, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.17863101
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433098832372907, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433098832372907, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433099711993852, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.17863101
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433099711993852, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433099711993852, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433099711993852, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.753528
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433099711993852, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627433099711993852, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 627433099711993853, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
       propertyPath: m_textInfo.characterCount
       value: 0
@@ -699,6 +767,44 @@ PrefabInstance:
     - target: {fileID: 627433099874137578, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549374966538357497, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_text
+      value: 'Mission Complete
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549374966538357497, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549374966538357497, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549374966538357497, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.26122272
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549374966538357497, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549374966538357497, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.1787558
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549374966538357497, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281268291
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647009997111684896, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_text
+      value: Mission failed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647009997111684896, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2054942868427612717, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -780,6 +886,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3811417746447909213, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d9f39540e8c41a04dbda9af0d8405285, type: 3}
     - target: {fileID: 4053897231077407349, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -819,6 +929,51 @@ PrefabInstance:
     - target: {fileID: 4053897231077407349, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302644260342170028, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_text
+      value: You were able to overhear all the spies on the map. You can return to
+        the main menu or play again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302644260342170028, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302644260342170028, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302644260342170028, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302644260342170028, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302644260342170028, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.099383764
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302644260342170028, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.6792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302644260342170028, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302644260342170028, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278234393
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779166872714843742, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403439445178321765, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
+      propertyPath: m_Name
+      value: SpyText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52fae5cb3740f6144a35797c5f53a48a, type: 3}
