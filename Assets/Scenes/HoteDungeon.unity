@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 81663355302429222, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
+      propertyPath: _food._speedDrop
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 81663355302429241, guid: cb4feb90ca9c97341b40fa0ca77acac9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.112
@@ -297,6 +301,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8656122511190256965, guid: e052e64e32db2da4e9a2b99a2d39f1d6, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656122511190256965, guid: e052e64e32db2da4e9a2b99a2d39f1d6, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656122511190256965, guid: e052e64e32db2da4e9a2b99a2d39f1d6, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656122511190256965, guid: e052e64e32db2da4e9a2b99a2d39f1d6, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8656122511190256967, guid: e052e64e32db2da4e9a2b99a2d39f1d6, type: 3}
       propertyPath: m_Name
       value: Main CameraCustom
@@ -358,6 +378,16 @@ MonoBehaviour:
   - {fileID: -6265498355218742269, guid: e75d217a59c549642b00aee6aa010e4f, type: 3}
   - {fileID: -6265498355218742269, guid: ed35e292852c5dd479d97df30d7d8d7f, type: 3}
   - {fileID: 2329549599852213256, guid: 8961484b2d687f64abbae2fe1cfbb489, type: 3}
+  - {fileID: 2329549599852213256, guid: f6fdaa7df5ff21346914fc72c5f3c77a, type: 3}
+  - {fileID: 2329549599852213256, guid: 67be693cb1cabca458aec0ac57a841db, type: 3}
+  - {fileID: 2329549599852213256, guid: 81f28ba035899624b974a0b078054bd0, type: 3}
+  - {fileID: 2329549599852213256, guid: eca709e8b43b3e34f8d3bc9b991fdd02, type: 3}
+  - {fileID: 2329549599852213256, guid: cce9ef3eb0c183640b0e36647ff89428, type: 3}
+  - {fileID: 2329549599852213256, guid: fd5ed2a511a058c4cb5c19f428ebff06, type: 3}
+  - {fileID: 2329549599852213256, guid: e5d88317804abbd4eb4f411b7f281dba, type: 3}
+  - {fileID: 2329549599852213256, guid: 3ea32546c19b41c44bd06ba3799d7f3e, type: 3}
+  - {fileID: 2329549599852213256, guid: d2343a230c7231742a87aa6bbf0c1900, type: 3}
+  - {fileID: 2329549599852213256, guid: c56c39f3caebe864da22c8a622f41bd9, type: 3}
   parentOfRoom: {fileID: 518618332}
   _countRoomInHotel: 25
   _countVentTrasition: 5
