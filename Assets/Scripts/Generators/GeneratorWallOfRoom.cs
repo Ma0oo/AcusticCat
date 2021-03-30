@@ -21,7 +21,7 @@ public class GeneratorWallOfRoom : MonoBehaviour
     }
 
     [ContextMenu("Протестировать генератор стен и полов")]
-    private void GenerateAll() //гАвно, просто гАвно
+    private void GenerateAll()
     {
         dataBaseWallAndFLoar = dataBasesWallAndFLoar[Random.Range(0, dataBasesWallAndFLoar.Length)];
 
